@@ -62,16 +62,12 @@ jobs:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
           resource-group: mslearn-gh-pipelines-
           cluster-name: contoso-video
-      - name: Run Helm Deploy
-        run: |
-          helm upgrade \
-            --install \
-            --create-namespace \
-            --atomic \
-            --wait \
-            --namespace staging \
-            contoso-website \
-            ./kubernetes/contoso-website \
-            --set image.repository=${{ secrets.ACR_NAME }} \
-            --set dns.name=${{ secrets.DNS_NAME }}
-  
+      - name: Deploy to Kubernetes cluster
+        uses: Azure/k8s-deploy@v1
+        with:     
+          manifests: |
+            kubernetes/contoso-website/templates/deployment.yaml
+            kubernetes/contoso-website/templates/service.yaml
+          images: |
+           mycontosocontainerregistry.azurecr.io
+          
