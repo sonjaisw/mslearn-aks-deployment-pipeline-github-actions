@@ -68,6 +68,5 @@ jobs:
           manifests: |
             kubernetes/contoso-website/templates/deployment.yaml
             kubernetes/contoso-website/templates/service.yaml
-          images: |
-            mycontosocontainerregistry.azurecr.io/contoso-website
+ 
           
