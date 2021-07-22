@@ -7,7 +7,7 @@
     {{ partial "head/favicons.html" . }}
     {{ partial "head/css.html" . }}
     {{ partial "css/owlCarousel.html" . }}
-    <h2>Hello Sonali</h2>
+    
 </head>
 
 <body>
@@ -24,6 +24,7 @@
                     class="bold-title {{ if or (.Site.Params.fadeIn | default true) .Site.Params.fadeInIndex }}fade-in one{{ end }}">
                     {{ .Title | markdownify }}
                 </h1>
+                <h2>Hello Sonali</h2>
                 <div
                     class="subtitle is-3 {{ if or (.Site.Params.fadeIn | default true) .Site.Params.fadeInIndex }}fade-in two{{ end }}">
                     {{ .Content }}
