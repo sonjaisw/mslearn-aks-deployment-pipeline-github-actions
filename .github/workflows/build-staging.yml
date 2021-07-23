@@ -52,6 +52,7 @@ jobs:
     needs: build_push_image # Will wait for the execution of the previous job
     steps:
       - uses: actions/checkout@v2
+      - run: git pull --no-rebase
       - name: Helm tool installer
         uses: Azure/setup-helm@v1
         with:
