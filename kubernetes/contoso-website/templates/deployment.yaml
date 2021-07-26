@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - image: 'mycontosocontainerregistry.azurecr.io/contoso-website:demo'
-          imagePullPolicy: Always
+          
           name: contoso-website
           resources:
             requests:
