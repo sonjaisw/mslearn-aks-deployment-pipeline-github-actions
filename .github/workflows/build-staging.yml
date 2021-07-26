@@ -47,7 +47,7 @@ jobs:
         with:
     # List of extra privileged entitlement (eg. network.host,security.insecure)
           context: .
-          tags: ${{secrets.ACR_NAME}}/contoso-website:latest1
+          tags: ${{secrets.ACR_NAME}}/contoso-website:demo
           push: true
 
   deploy:
