@@ -13,7 +13,7 @@ spec:
         app: contoso-website
     spec:
       containers:
-        - image: 'mycontosocontainerregistry.azurecr.io/contoso-website:latest'
+        - image: 'mycontosocontainerregistry.azurecr.io/contoso-website:latest1'
           name: contoso-website
           resources:
             requests:
