@@ -13,8 +13,8 @@ spec:
         app: contoso-website
     spec:
       containers:
-        - imagePullPolicy: Always
         - image: 'mycontosocontainerregistry.azurecr.io/contoso-website:latest1'
+          imagePullPolicy: Always
           name: contoso-website
           resources:
             requests:
